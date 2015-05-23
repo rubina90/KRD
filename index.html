@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="Libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
 
-    <script src="Libs/bootstrap/js/bootstrap.min/js" type="text/javascript"></script>
+    <script src="Libs/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="Libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -23,19 +24,17 @@
                 </h1>
                 <hr />
                 <div class="header-description">
+                    <img src="Images/nr1.png" alt="numer 1" />
                     <h2>
-                        <img src="Images/nr1.png" alt="numer 1" />
                         Dopisuj dłużników i odzyskuj swoje pieniądze
                     </h2>
-
+                    <img src="Images/nr2.png" alt="numer 2" />
                     <h2>
-                        <img src="Images/nr2.png" alt="numer 2" />
                         Sprawdzaj kontrahentów i zabezpieczaj się
                         przed spiralą zadłużeń
                     </h2>
-
+                    <img src="Images/nr3.png" alt="numer 3" />
                     <h2>
-                        <img src="Images/nr3.png" alt="numer 3" />
                         Monitoruj klientów i reaguj na bieżąco
                         w razie potrzeby
                     </h2>
@@ -44,12 +43,93 @@
         </div>
     </header>
 <main>
+    <div class="title">
+        <h3>WYPEŁNIJ FORMULARZ</h3>
+    </div>
+    <div class="form">
+        <form id="form" action="" method="post">
 
+            <div class="col-md-4">
+                <input name="CompanyName" placeholder="Nazwa firmy" type="text" /><br />
+                <input name="TaxId" placeholder="NIP" type="text" />
+            </div>
+
+            <div class="col-md-4">
+                <input name="Phone.Number" placeholder="Telefon" type="text" /><br />
+                <input name="Mail.Address" placeholder="Adres e-mail" type="text" />
+            </div>
+
+            <div class="col-md-4">
+                <button><img src="Images/btnWygenerujUmowe.png" /></button>
+            </div>
+            <div style="clear: both;"></div>
+            <div id="agreements">
+                <div class="agreement col-md-3">
+                    <input checked="checked" id="agreement1" name="agreement1" type="checkbox" value="true" /><input name="agreement1" type="hidden" value="true" />
+                    <div id="agreement1Text"></div>
+                </div>
+                <div class="agreement col-md-3">
+                    <input checked="checked" id="agreement2" name="agreement2" type="checkbox" value="true" /><input name="agreement2" type="hidden" value="true" />
+                    <div id="agreement2Text"></div>
+                    <a href="#" id="agreement2More">więcej</a>
+                </div>
+                <div class="agreement col-md-3">
+                    <input checked="checked" id="agreement3" name="agreement3" type="checkbox" value="true" /><input name="agreement3" type="hidden" value="true" />
+                    <div id="agreement3Text"></div>
+                    <a href="#" id="agreement3More">więcej</a>
+                </div>
+                <div class="agreement col-md-3">
+                    <input checked="checked" id="agreement4" name="agreement4" type="checkbox" value="true" /><input name="agreement4" type="hidden" value="true" />
+                    <div id="agreement4Text"></div>
+                    <a href="#" id="agreement4More">więcej</a>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
 </main>
+    <div class="clearfix"></div>
 <footer>
-
+    <div class="col-md-9">
+        <img src="Images/KRDlogoFooter.png" alt="KRD logo" />
+        <div class="footer-text">
+            Przesyłka wysłana na zlecenie: Krajowy Rejestr Długów Biuro Informacji Gospodarczej SA, ul. Armii Ludowej 21, 51-214 Wrocław, spółka zarejestrowana w Sądzie Rejonowym dla Wrocławia-Fabrycznej, VI Wydział Gospodarczy; KRS: 0000169851; NIP: 8951794707; kapitał założycielski: 4.000.000 zł, wpłacony w całości.
+        </div>
+    </div>
+    <div clss="col-md-3">
+        <a href="http://www2.krd.pl/Pages/Polityka-prywatnosci.aspx" target="_blank">Polityka prywatności</a>
+    </div>
 </footer>
 
+    <script>
+        $(document).ready(function () {
+
+            $("#agreement1Text").html("Wysłanie zgłoszenia jest jednoznaczne z akceptacją <a target='_blank' href='/GeneratorSOP/Documents/Regulamin'>Regulaminu</a>");
+            $("#agreement2Text").html("Wyrażam zgodę na wykorzystanie telekomunikacyjnych urządzeń końcowych i automatycznych systemów wywołujących dla celów marketingu bezpośredniego");
+            $("#agreement3Text").html("Wyrażam zgodę na otrzymywanie informacji handlowych za pomocą środków komunikacji elektronicznej");
+            $("#agreement4Text").html("Wyrażam zgodę na przetwarzanie moich danych osobowych, zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2014 r. poz. 1182 ze zm.).");
+
+            $("#agreement2More").click(function () {
+                $(this).remove();
+                $("#agreement2Text").html('Zaznaczone pole wyboru jest jednoznaczne z wyrażeniem zgody na wykorzystanie przez Krajowy Rejestr Dług&#243;w Biuro Informacji Gospodarczej SA z siedzibą we Wrocławiu, ul. Armii Ludowej 21, 51-214 Wrocław oraz podmioty z Grupy KRD (lista podmiot&#243;w dostępna pod www.krd.pl/grupa) telekomunikacyjnych urządzeń końcowych i automatycznych system&#243;w wywołujących dla cel&#243;w marketingu bezpośredniego zgodnie z Ustawą z dnia 16 lipca 2004 r. Prawo telekomunikacyjne. Zgoda może być odwołana w każdym czasie poprzez wysłanie odwołania zgody w formie elektronicznej na adres rezygnuje@krd.pl');
+                return false;
+            });
+
+            $("#agreement3More").click(function () {
+                $(this).remove();
+                $("#agreement3Text").html('Zaznaczone pole wyboru jest jednoznaczne z wyrażeniem zgody na otrzymywanie od Krajowego Rejestru Dług&#243;w Biura Informacji Gospodarczej SA z siedzibą we Wrocławiu, ul. Armii Ludowej 21, 51-214 Wrocław oraz podmioty z Grupy KRD (lista podmiot&#243;w dostępna pod www.krd.pl/grupa) informacji handlowych za pomocą środk&#243;w komunikacji elektronicznej zgodnie z Ustawą z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2002 r. Nr 144, poz. 1204 z p&#243;źn. zm.). Przedmiotowa zgoda może być odwołana w dowolnym czasie. Więcej informacji uzyskać można w polityce prywatności KRD BIG SA, dostępnej pod adresem www.krd.pl.');
+                return false;
+            });
+
+            $("#agreement4More").click(function () {
+                $(this).remove();
+                $("#agreement4Text").html('Podane przez Panią/Pana informacje mogą być przetwarzane obecnie i w przyszłości w celu promocji i marketingu usług świadczonych przez KRD BIG SA oraz podmioty Grupy KRD (pełna lista dostępna pod adresem http://www.krd.pl/grupa). Administratorem danych osobowych jest Krajowy Rejestr Dług&#243;w Biuro Informacji Gospodarczej SA, ul. Armii Ludowej 21, 51-214 Wrocław. Podanie danych osobowych jest dobrowolne. Jednocześnie informujemy, że przysługuje Pani/Panu prawo dostępu i aktualizowania swoich danych oraz wniesienia w dowolnym czasie sprzeciwu, co do dalszego ich przetwarzania.');
+                return false;
+            });
+        });
+    </script>
 
 </body>
 </html>

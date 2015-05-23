@@ -41,7 +41,7 @@ header {
 }
 
 hr {
-    margin: 40px auto;
+    margin: 35px  auto 15px auto;
     background: #4d4d4d;
     width: 240px;
     height: 1px;
@@ -51,6 +51,7 @@ hr {
 .header-description {
     width: 58%;
     margin: 0 auto;
+    color: rgb(77,77,77);
 }
 
 h2 {
@@ -62,8 +63,95 @@ h2 {
     /*text-transform: uppercase;*/
 }
 
-h2 > img {
+.header-description > img {
     display: block;
     margin: 10px auto;
 }
 
+main {
+    width: 960px;
+    margin: -54px auto 0 auto;
+}
+.title {
+    background-color: #fff;
+
+}
+
+h3 {
+    font-family: Novecento;
+    font-size: 16px;
+    color: #609bc7;
+    height: 44px;
+    padding: 16px 0 16px 20px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.form {
+    background: #E6E9ED;
+    padding: 30px 30px 30px 35px;
+    height: 100%;
+    display: block;
+}
+
+.form input[type="text"] {
+    width: 260px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    background: #fff;
+    color: #4d4d4d;
+    height: 40px;
+    font-size: 14px;
+    padding: 3px 0 0 15px;
+    box-shadow: 1px 1px 4px #bbb inset;
+    border: none;
+}
+
+.form button {
+    padding: 0px;
+    border: none;
+}
+
+input[type="text"]:hover,
+input[type="text"]:active,
+input[type="text"]:focus
+{
+    border: none;
+    outline: none;
+}
+
+#agreements {
+    position: relative;
+    float: left;
+    left: 0;
+    top: 10px;
+    display: block;
+}
+
+.agreement {
+    color: #7b7b7b;
+    font-family: 'Open Sans', Arial;
+    font-size: 11px;
+}
+
+footer {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    height: 120px;
+    /* background: url(/siteimages/footer.png) no-repeat; */
+    top: 20px;
+}
+
+footer img {
+    float: left;
+}
+
+footer  .footer-text {
+    float: left;
+    color: #a1a1a1;
+    font-size: 11px;
+    width: 600px;
+    line-height: 14px;
+}
