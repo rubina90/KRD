@@ -47,43 +47,46 @@
         <h3>WYPEŁNIJ FORMULARZ</h3>
     </div>
     <div class="form">
-        <form id="form" action="" method="post">
-
-            <div class="col-md-4">
+        <form id="form" class="l-flex" action="" method="post">
+            <div class="l-flex-3">
+            <div class="col-md-4 col-sm-6">
                 <input name="CompanyName" placeholder="Nazwa firmy" type="text" /><br />
                 <input name="TaxId" placeholder="NIP" type="text" />
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
                 <input name="Phone.Number" placeholder="Telefon" type="text" /><br />
                 <input name="Mail.Address" placeholder="Adres e-mail" type="text" />
             </div>
-
-            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 button l-flex-1">
                 <button><img src="Images/btnWygenerujUmowe.png" /></button>
             </div>
+
+
             <div style="clear: both;"></div>
-            <div id="agreements">
-                <div class="agreement col-md-3">
-                    <input checked="checked" id="agreement1" name="agreement1" type="checkbox" value="true" /><input name="agreement1" type="hidden" value="true" />
-                    <div id="agreement1Text"></div>
+                <div id="agreements" class="l-flex-2">
+                    <div class="agreement col-md-3 col-sm-6">
+                        <input checked="checked" id="agreement1" name="agreement1" type="checkbox" value="true" /><input name="agreement1" type="hidden" value="true" />
+                        <div id="agreement1Text"></div>
+                    </div>
+                    <div class="agreement col-md-3 col-sm-6">
+                        <input checked="checked" id="agreement2" name="agreement2" type="checkbox" value="true" /><input name="agreement2" type="hidden" value="true" />
+                        <div id="agreement2Text"></div>
+                        <a href="#" id="agreement2More">więcej</a>
+                    </div>
+                    <div class="agreement col-md-3 col-sm-6">
+                        <input checked="checked" id="agreement3" name="agreement3" type="checkbox" value="true" /><input name="agreement3" type="hidden" value="true" />
+                        <div id="agreement3Text"></div>
+                        <a href="#" id="agreement3More">więcej</a>
+                    </div>
+                    <div class="agreement col-md-3 col-sm-6">
+                        <input checked="checked" id="agreement4" name="agreement4" type="checkbox" value="true" /><input name="agreement4" type="hidden" value="true" />
+                        <div id="agreement4Text"></div>
+                        <a href="#" id="agreement4More">więcej</a>
+                    </div>
                 </div>
-                <div class="agreement col-md-3">
-                    <input checked="checked" id="agreement2" name="agreement2" type="checkbox" value="true" /><input name="agreement2" type="hidden" value="true" />
-                    <div id="agreement2Text"></div>
-                    <a href="#" id="agreement2More">więcej</a>
-                </div>
-                <div class="agreement col-md-3">
-                    <input checked="checked" id="agreement3" name="agreement3" type="checkbox" value="true" /><input name="agreement3" type="hidden" value="true" />
-                    <div id="agreement3Text"></div>
-                    <a href="#" id="agreement3More">więcej</a>
-                </div>
-                <div class="agreement col-md-3">
-                    <input checked="checked" id="agreement4" name="agreement4" type="checkbox" value="true" /><input name="agreement4" type="hidden" value="true" />
-                    <div id="agreement4Text"></div>
-                    <a href="#" id="agreement4More">więcej</a>
-                </div>
-            </div>
+
 
         </form>
 

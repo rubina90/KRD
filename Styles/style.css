@@ -6,7 +6,7 @@
 
 
 html {
-    background: url("../Images/topImage.jpg") top center no-repeat;
+    background: url("../Images/topImage.jpg") top center no-repeat #f6f6f6;
     overflow-x: hidden;
 }
 
@@ -96,6 +96,11 @@ h3 {
     height: 100%;
     display: block;
     overflow: auto;
+
+
+}
+
+#form {
 }
 
 .form input[type="text"] {
@@ -170,4 +175,70 @@ footer a, footer a:visited, footer a:link {
 
 footer a:hover {
     opacity: 0.8;
+}
+
+@media(max-width: 960px) {
+    html {
+        background: #f6f6f6;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .l-flex {
+        display: -moz-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -moz-box-orient: vertical;
+        -webkit-box-orient: vertical;
+        -webkit-flex-flow: column;
+        -ms-flex-direction: column;
+        flex-flow: column;
+    }
+    .l-flex-3 {
+        -moz-box-ordinal-group: 1;
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .l-flex-1 {
+        -moz-box-ordinal-group:3;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+
+    .l-flex-2 {
+        -moz-box-ordinal-group: 2;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+/*
+    #form {
+        -webkit-flex-flow: column;
+        flex-direction: column;
+    }
+
+    #form > #agreements, #form > button  {
+        /* Return them to document order
+        -webkit-order: 0;
+        order: 0;
+    }*/
+
+    /*form > nav, #main > aside, header, footer {
+        min-height: 50px;
+        max-height: 50px;
+    }*/
+}
+
+@media(min-width: 960px) {
+
 }
