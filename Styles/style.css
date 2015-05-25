@@ -119,6 +119,8 @@ h3 {
 .form button {
     padding: 0px;
     border: none;
+    margin: 0px auto;
+    display: block;
 }
 
 input[type="text"]:hover,
@@ -186,6 +188,10 @@ footer a:hover {
         width: 100%;
     }
 
+    .form button {
+        margin-top: 20px;
+    }
+
     .l-flex {
         display: -moz-box;
         display: -webkit-box;
@@ -221,24 +227,4 @@ footer a:hover {
         -ms-flex-order: 2;
         order: 2;
     }
-/*
-    #form {
-        -webkit-flex-flow: column;
-        flex-direction: column;
-    }
-
-    #form > #agreements, #form > button  {
-        /* Return them to document order
-        -webkit-order: 0;
-        order: 0;
-    }*/
-
-    /*form > nav, #main > aside, header, footer {
-        min-height: 50px;
-        max-height: 50px;
-    }*/
-}
-
-@media(min-width: 960px) {
-
 }
