@@ -131,6 +131,18 @@ input[type="text"]:focus
     outline: none;
 }
 
+input[type="checkbox"] {
+    position: relative;
+    left: -20px;
+    top: 20px;
+    border: 0;
+    padding: 0;
+}
+
+.agreement-text {
+    padding: 10px 20px 20px 40px;
+}
+
 #agreements {
     left: 0;
     top: 10px;
@@ -184,9 +196,10 @@ footer a:hover {
         background: #f6f6f6;
     }
 
-    header {
+    header, main, footer {
         width: 100%;
     }
+
 
     .form button {
         margin-top: 20px;
@@ -226,5 +239,18 @@ footer a:hover {
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .form input[type="text"] {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .agreement-text {
+        max-width: 260px;
+        margin: 0 auto;
+        display: block;
     }
 }
